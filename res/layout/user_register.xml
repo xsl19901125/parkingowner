@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".LoginActivity" >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bar_bg_gray"
+        android:gravity="center"
+        android:text="@string/user_register_title"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_account"
+        style="@style/accountInputBorder"
+        android:layout_below="@id/tv_title"
+        android:layout_marginTop="18dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_account"
+            android:textColor="@color/grey" />
+        <!-- 用户登录用户名框 -->
+
+        <EditText
+            android:id="@+id/userLoginNameTxt"
+            style="@style/accountEditText"
+            android:hint="@string/account_reg_hint" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_password"
+        style="@style/accountInputBorder"
+        android:layout_below="@id/ll_account"
+        android:layout_marginTop="15dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_password"
+            android:textColor="@color/grey" />
+        <!-- 用户登录密码框 -->
+
+        <EditText
+            android:id="@+id/userPwdTxt"
+            style="@style/accountEditText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:hint="@string/password_reg_hint"
+            android:password="true" />
+    </LinearLayout>
+    <!-- 用户登录密码确认框 -->
+
+    <LinearLayout
+        android:id="@+id/ll_password_confirm"
+        style="@style/accountInputBorder"
+        android:layout_below="@id/ll_password"
+        android:layout_marginTop="15dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_password"
+            android:textColor="@color/grey" />
+        <!-- 用户登录密码框 -->
+
+        <EditText
+            android:id="@+id/user_pwdconfirmTxt"
+            style="@style/accountEditText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:hint="@string/password_register_confirm_hint"
+            android:password="true" />
+    </LinearLayout>
+    <!-- 用户手机输入框 -->
+
+    <LinearLayout
+        android:id="@+id/userPhone"
+        style="@style/accountInputBorder"
+        android:layout_below="@id/ll_password_confirm"
+        android:layout_marginTop="15dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_phone"
+            android:textColor="@color/grey" />
+        <!-- 用户登录密码框 -->
+
+        <EditText
+            android:id="@+id/userPhoneTxt"
+            style="@style/accountEditText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:hint="@string/password_hint" />
+    </LinearLayout>
+    <!-- 底部按钮控件 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userPhone"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="13dp" >
+
+        <!-- 用户注册用户名 -->
+
+        <Button
+            android:id="@+id/bt_reg_ok"
+            style="@style/accountButtonStyle"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/btn_add_accounts"
+            android:text="@string/user_register_button" />
+        <!-- 用户注册密码 -->
+
+        <Button
+            android:id="@+id/bt_reg_cancel"
+            style="@style/accountButtonStyle"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/btn_quick_register"
+            android:onClick="enter"
+            android:text="@string/user_register_cancle_button" />
+    </LinearLayout>
+
+</RelativeLayout>
